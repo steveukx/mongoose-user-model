@@ -1,7 +1,7 @@
 {
   "name": "mongoose-user-model",
   "description": "Mongoose/mongo model representing a user with authenticated user accounts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Steve King <steve@mydev.co>",
   "contributors": [
     {
