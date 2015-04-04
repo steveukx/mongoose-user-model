@@ -12,5 +12,9 @@
   "repository": "git://github.com/steveukx/mongoose-user-model.git",
   "dependencies": {
     "es6-promise": "^2.0.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-release-steps": "^0.3.7"
   }
 }
