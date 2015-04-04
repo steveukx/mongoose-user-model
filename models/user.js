@@ -59,7 +59,8 @@ module.exports = function(mongoose, properties, schemaExtensions) {
             },
             profileData,
             {
-                upsert: true
+                upsert: true,
+                new: true
             },
             function (err, user) {
                 user.accountByType(accountType).accessToken = accessToken;
