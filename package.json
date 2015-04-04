@@ -1,0 +1,16 @@
+{
+  "name": "mongoose-user-model",
+  "description": "Mongoose/mongo model representing a user with authenticated user accounts",
+  "version": "0.0.0",
+  "author": "Steve King <steve@mydev.co>",
+  "contributors": [
+    {
+      "name": "Steve King",
+      "email": "steve@mydev.co"
+    }
+  ],
+  "repository": "git://github.com/steveukx/mongoose-user-model.git",
+  "dependencies": {
+    "es6-promise": "^2.0.1"
+  }
+}
