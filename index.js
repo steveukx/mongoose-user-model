@@ -13,10 +13,10 @@ module.exports = function (mongoose, properties, schemaExtensions) {
 
     if (schemaExtensions.connection) {
         schemaExtensions.Account =
-            schemaExtensions.connection('account', schemaExtensions.AccountSchema = schemaExtensions.Account);
+            schemaExtensions.connection.model('account', schemaExtensions.AccountSchema = schemaExtensions.Account);
 
         schemaExtensions.User =
-            schemaExtensions.connection('user', schemaExtensions.UserSchema = schemaExtensions.User);
+            schemaExtensions.connection.model('user', schemaExtensions.UserSchema = schemaExtensions.User);
     }
 
     return {
