@@ -20,7 +20,7 @@ module.exports = function (mongoose, properties, schemaExtensions) {
     }
 
     return {
-        user: schemaExtensions.User,
-        account: schemaExtensions.Account
+        User: schemaExtensions.User,
+        Account: schemaExtensions.Account
     }
 };
