@@ -26,14 +26,24 @@ default which can then be bound to a connection.
     };
     
     // returns {Account: mongoose.Schema, User: mongoose.Schema}
-    var models = require('mongoose-user-model')(mongoose, properties, schemaExtensions);
+    var schemas = require('mongoose-user-model')(mongoose, properties, schemaExtensions);
     
     var app = require('express')();
     app.use('/auth', 
         require('express-auth-route')(
             properties, 
-            mongoose.model(models.User), 
-            mongoose.model(models.Account)
+            mongoose.model('user', schemas.User), 
+            mongoose.model('account', schemas.Account)
         )
     );
 
+To work with just the models rather than schemas, supply a mongoose connection in the `schemaExtensions` object:
+ 
+    var mongoose = require('mongoose');
+    var schemaExtensions = {
+        connection: mongoose.connect('mongodb://localhost/user-accounts');
+    };
+    var models = require('mongoose-user-model')(mongoose, properties, schemaExtensions);
+
+    var app = require('express')();
+    app.use('/auth', require('express-auth-route')(properties, models.User, models.Account));
